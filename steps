@@ -1,8 +1,20 @@
-create postgres user
+Dependencies
+
+# apt install nodejs
 # apt install npm
 # apt install postgres postgres-contrib
+
+create postgres user
+
 # sudo -i -u postgres
 # psql
-# ALTER USER postgres WITH PASSWORD 'password';
+# ALTER USER postgres WITH PASSWORD 'password'; 
+# systemctl restart postgresql
+
 # npm install 
+# node app.js
+
+# \c testdb 
+# create table employee (name varchar(20), job varchar(20), department varchar(20), salary int, hire_date date );
+# \d
 # node app.js
