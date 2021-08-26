@@ -2,7 +2,7 @@ Dependencies
 
 # apt install nodejs
 # apt install npm
-# apt install postgres postgres-contrib
+# apt install postgresql postgresql-contrib
 
 create postgres user
 
