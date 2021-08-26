@@ -1,5 +1,5 @@
-# CRUD-Nodejs-PostgreSQL
-This repository contains a simple Application explaining CRUD operations using PostgreSQL as database and Nodejs on the backend.
+# reactapplication-employee
+This repository contains a simple Application explaining operations using PostgreSQL as database and Nodejs on the backend.
 
 ## Environment Setup
 To run this project, make sure you have the following installed on your system.
