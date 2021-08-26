@@ -26,7 +26,7 @@ Set the connectionstring with user(postgres) & password(1234)
      # cd /etc/posgresql/12/main 
      # vi postgresql.conf
  
-uncomment the localhost and rename the lacal host as *
+uncomment the listen_addresses and rename the lacal host as *
 
 create database
 
