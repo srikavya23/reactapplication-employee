@@ -15,6 +15,6 @@ create postgres user
 # node app.js
 
 # \c testdb 
-# create table employee (name varchar(20), job varchar(20), department varchar(20), salary int, hire_date date );
+# CREATE TABLE employee (id serial NOT NULL,name character varying(200) NOT NULL,job character varying(200) NOT NULL,department character varying(20) NOT NULL,salary int NOT NULL,hire_date date NOT NULL);
 # \d
 # node app.js
