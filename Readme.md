@@ -29,7 +29,7 @@ Set the connectionstring with user(postgres) & password(1234)
 uncomment the listen_addresses and rename the lacal host as *
 
 create database
-
+     # sudo -i -u postgres
      # psql -U postgres
      # CREATE DATABASE testdb;
      # \c testdb 
