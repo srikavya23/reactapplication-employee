@@ -12,7 +12,7 @@ services:
       POSTGRES_DB: test
     volumes:
       - test-db:/var/lib/postgresql/data
-      - ./create-table.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./create-table.sql:/docker-entrypoint-initdb.d/create-table.sql
 
 
   nodejs:
@@ -30,8 +30,3 @@ services:
 
 volumes:
   test-db:
-
-
-
-
-
