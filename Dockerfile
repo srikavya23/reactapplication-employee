@@ -1,6 +1,9 @@
-FROM      node:alpine AS builder
-COPY       . ./employee
-WORKDIR   /employee
-RUN       npm install
-EXPOSE   80
-CMD      [ "node", "app.js" ]
+FROM         node:lts-alpine
+RUN          mkdir  -p /app/postgres
+WORKDIR      /app/postgres
+COPY         .  /app/postgres
+RUN          npm install
+COPY         . .
+RUN          ls
+EXPOSE       4000
+CMD          [ "node", "app.js"]
