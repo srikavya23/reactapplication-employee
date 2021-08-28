@@ -3,7 +3,7 @@ RUN          mkdir  -p /app/postgres
 WORKDIR      /app/postgres
 COPY         .  /app/postgres
 RUN          npm install
-COPY         . /app/postgres
+COPY         . .
 RUN          ls
 EXPOSE       4000
 CMD          [ "node", "app.js"]
