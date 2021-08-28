@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   nodejs:
-    image: srikavyapendiala/project
+    image: srikavyapendiala/employee
     container_name: nodejs
     depends_on:
       - postgres
