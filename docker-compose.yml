@@ -1,9 +1,25 @@
 version: "3.3"
 services:
-  db:
-    image: postgres
+  nodejs:
+    image: srikavyapendiala/project
+    container_name: nodejs
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:1234@postgres:5432/test
+      NODE_ENV: development
+      PORT: 4000
+    ports:
+      - "4000:4000"
+
+    command: node app.js
+    volumes:
+      - .:/app/
+      - /app/postgres/node_modules
+
+  postgres:
+    image: postgres:10.4
     container_name: postgres
-    restart: always
     ports:
       - "5432:5432"
     environment:
@@ -11,20 +27,8 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: test
     volumes:
-      - test-db:/var/lib/postgresql/data
       - ./create-table.sql:/docker-entrypoint-initdb.d/create-table.sql
 
 
-  nodejs:
-    image: srikavyapendiala/project
-    container_name: nodejs
-    ports:
-      - "4000:4000"
 
-    environment:
-      - connectionString=Server=localhost,5432;database=test;UserId=postgres;Password=1234
-    depends_on:
-      - db
-   
-volumes:
-  test-db:
+
