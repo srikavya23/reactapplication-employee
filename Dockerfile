@@ -1,9 +1,6 @@
 FROM         node:lts-alpine
-RUN          mkdir  -p /app/postgres
-WORKDIR      /app/postgres
-COPY         .  /app/postgres
+COPY         . ./reactapplication-employee
+WORKDIR      /reactapplication-employee
 RUN          npm install
-COPY         . .
-RUN          ls
 EXPOSE       4000
 CMD          [ "node", "app.js"]
