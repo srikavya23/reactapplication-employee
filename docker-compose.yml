@@ -27,7 +27,7 @@ services:
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: testdb
     volumes:
-      - ./create-table.sql:/docker-entrypoint-initdb.d/create-table.sql
+      - ./create-table.sql:/docker-entrypoint-initdb.d/create_tables.sql
 
 
 
